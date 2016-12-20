@@ -1,0 +1,71 @@
+package com.servletTest.ex1;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class ServletTest1
+ */
+@WebServlet("/ServletTest1")
+public class ServletTest1 extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public ServletTest1() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		System.out.println("doGet");
+		
+		response.setContentType("text/html; charset=euc-kr");
+		PrintWriter writer = response.getWriter();
+		
+		writer.println("<html>");
+		writer.println("<head>");
+		writer.println("</head>");
+		writer.println("<body>");
+		writer.println("HelloWorld~~~");
+		writer.println("</body>");
+		writer.println("</html>");
+		
+		writer.close();
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		System.out.println("doPost");
+		
+		response.setContentType("text/html; charset=euc-kr");
+		PrintWriter writer = response.getWriter();
+		
+		writer.println("<html>");
+		writer.println("<head>");
+		writer.println("</head>");
+		writer.println("<body>");
+		writer.println("post 방식입니다.");
+		writer.println("</body>");
+		writer.println("</html>");
+		
+		writer.close();
+		
+		
+	}
+
+}
