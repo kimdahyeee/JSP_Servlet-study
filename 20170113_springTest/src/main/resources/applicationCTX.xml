@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="calculator" class="com.spring.ex1.Calculator"></bean>
+	<bean id="myCalculator" class="com.spring.ex1.MyCalculator">
+		<property name="calculator">
+			<ref bean="calculator"/> <!-- calculator 객체 참조하고 있다. -->
+		</property>
+		<property name="firstNum" value="10"></property><!-- set함수가 만들어져 있는 경우에만 가능 -->
+		<property name="secondNum" value="2"></property>
+	</bean>
+	
+</beans>

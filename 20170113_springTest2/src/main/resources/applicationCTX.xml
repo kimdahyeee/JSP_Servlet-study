@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="student1" class="com.spring.ex2.Student">
+		<constructor-arg value="홍길동"></constructor-arg>
+		<constructor-arg value="12살"></constructor-arg>
+		<constructor-arg value="3학년"></constructor-arg>
+		<constructor-arg value="3반"></constructor-arg>
+	</bean>
+
+	<bean id="student2" class="com.spring.ex2.Student">
+		<constructor-arg value="홍길즁"></constructor-arg>
+		<constructor-arg value="1살"></constructor-arg>
+		<constructor-arg value="1학년"></constructor-arg>
+		<constructor-arg value="1반"></constructor-arg>
+	</bean>
+	
+	<bean id="studentInfo" class="com.spring.ex2.StudentInfo">
+		<constructor-arg>
+			<ref bean="student1"></ref> 
+		</constructor-arg>
+	</bean>
+</beans>

@@ -22,7 +22,7 @@
 	<c:catch var="error">
 		<%=2/0 %>
 	</c:catch>
-	<c:out value="${error }"/>
+	<c:out value="${error }"/><br>
 	
 	<c:if test="${1+2==3 }">
 	1+2=3
@@ -30,5 +30,9 @@
 	<c:if test="${1+2!=3 }">
 	1+2!=3
 	</c:if>
+	
+	<br>
+	
+	
 </body>
 </html>
